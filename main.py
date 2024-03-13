@@ -63,6 +63,6 @@ if config.is_dev:
     print("polling started")
     BotDB.loop.run_until_complete(bot.infinity_polling())
 else:
-    BotDB.loop.create_task(set_webhook())
+    BotDB.loop.run_until_complete(set_webhook())
     print("server started")
     web.run_app(app_factory(), host=config.host, port=config.port)
