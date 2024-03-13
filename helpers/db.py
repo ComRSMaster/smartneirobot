@@ -14,7 +14,7 @@ class _BotDB:
 
     async def connect(self):
         self.pool = await aiomysql.create_pool(
-            host=mysql_server, user=mysql_user, password=mysql_password, db='bot_db', autocommit=True, loop=self.loop)
+            host=mysql_server, user=mysql_user, password=mysql_password, db='smartneirobot_db', autocommit=True, loop=self.loop)
 
     @asynccontextmanager
     async def cursor(self):
