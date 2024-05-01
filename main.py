@@ -65,4 +65,4 @@ if config.is_dev:
 else:
     BotDB.loop.run_until_complete(set_webhook())
     print("server started")
-    web.run_app(app_factory(), host=config.host, port=config.port)
+    web.run_app(app_factory(), host=config.host, port=config.port, loop=BotDB.loop)
