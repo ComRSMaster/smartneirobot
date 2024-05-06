@@ -19,8 +19,8 @@ AiDraw()
 AiTalk()
 AiUpscale()
 AiVoice()
-CmdHandler()
 ChatUpdater()
+CmdHandler()  # need to register last, because it handles default /cancel command
 
 routes = web.RouteTableDef()
 
@@ -61,6 +61,7 @@ async def set_webhook():
 # Запуск бота
 if config.is_dev:
     print("polling started")
+    BotDB.loop.run_until_complete(bot.delete_webhook())
     BotDB.loop.run_until_complete(bot.infinity_polling())
 else:
     BotDB.loop.run_until_complete(set_webhook())

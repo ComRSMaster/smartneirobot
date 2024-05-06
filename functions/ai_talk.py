@@ -30,10 +30,7 @@ async def reset_context(chat_id):
 generating_tasks: dict[str, Task] = {}
 
 g4f.debug.version_check = False
-models = {"ChatGPT 3.5": g4f.models.gpt_35_turbo,
-          "Llama2": g4f.models.llama2_70b,
-          "CodeLlama": g4f.models.codellama_70b_instruct,
-          "GeminiPro": g4f.models.gemini_pro}
+models = {"ChatGPT 3.5": g4f.models.gpt_35_turbo}
 
 list_models = list(models)
 
