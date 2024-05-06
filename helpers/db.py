@@ -2,7 +2,6 @@ import asyncio
 from contextlib import asynccontextmanager
 
 import aiomysql
-import ujson
 from pymysql.err import OperationalError
 
 from helpers.config import mysql_server, mysql_password, mysql_user

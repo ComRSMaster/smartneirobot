@@ -11,6 +11,10 @@ class CmdHandler:
         await bot.send_message(msg.chat.id, "<b>Всё отменяю</b>", reply_markup=ReplyKeyboardRemove())
         await BotDB.set_state(msg.chat.id, -1)
 
+    @bot.message_handler(['cancel'], state=-1)
+    async def command_cancel(msg: Message):
+        await bot.send_message(msg.chat.id, "<b>Нечего отменять</b>", reply_markup=ReplyKeyboardRemove())
+
     @bot.message_handler(content_types=['photo'])
     async def chatting(msg: Message):
         await bot.reply_to(msg, "<b>Что сделать с этим фото?</b>",

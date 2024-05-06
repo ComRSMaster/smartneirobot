@@ -31,9 +31,7 @@ generating_tasks: dict[str, Task] = {}
 
 g4f.debug.version_check = False
 models = {"ChatGPT 3.5": g4f.models.gpt_35_turbo,
-          "Llama2": g4f.models.llama2_70b,
-          "CodeLlama": g4f.models.codellama_70b_instruct,
-          "GeminiPro": g4f.models.gemini_pro}
+          "Llama3": g4f.models.llama3_70b_instruct}
 
 list_models = list(models)
 

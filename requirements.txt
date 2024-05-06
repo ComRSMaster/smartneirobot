@@ -1,11 +1,11 @@
 pytelegrambotapi
-g4f
+g4f[image]
+g4f[openai]
 ujson
 aiomysql
 aiohttp
 PyMySQL
 nest_asyncio
-undetected_chromedriver
 platformdirs
 setuptools
 PyExecJS
